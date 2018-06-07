@@ -26,25 +26,23 @@
 </template>
 
 <script>
-    import { XHeader, Tabbar, TabbarItem, Icon } from 'vux'
+  import {XHeader, Tabbar, TabbarItem, Icon} from 'vux'
 
-    export default {
-        name: "home",
-        data () {
-            return {
-
-            }
-        },
-        components: {
-            XHeader,
-            Tabbar,
-            TabbarItem
-        }
+  export default {
+    name: "home",
+    data() {
+      return {}
+    },
+    components: {
+      XHeader,
+      Tabbar,
+      TabbarItem
     }
+  }
 </script>
 
 <style scoped lang="less">
-.btn-group{
+    .btn-group {
 
-}
+    }
 </style>

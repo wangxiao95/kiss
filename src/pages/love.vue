@@ -8,14 +8,15 @@
 </template>
 
 <script>
-    import { Tab, TabItem } from 'vux'
-    export default {
-        name: "love",
-        components: {
-            Tab,
-            TabItem
-        }
+  import {Tab, TabItem} from 'vux'
+
+  export default {
+    name: "love",
+    components: {
+      Tab,
+      TabItem
     }
+  }
 </script>
 
 <style scoped>

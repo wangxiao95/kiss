@@ -1,7 +1,10 @@
 <template>
-    <div id="box">
-        <Scroller lock-x height="560px">
-            <div>
+    <!--<div id="box">-->
+        <scroller :on-refresh="refresh"
+                  :on-infinite="infinite"
+                  height="93%"
+                    style="margin-top: 46px;">
+
                 <div v-for="item in list" @click="toDetail">
                     <card class="item">
                         <img slot="header" src="http://placeholder.qiniudn.com/640x300" style="width:100%;display:block;">
@@ -16,13 +19,14 @@
                         </div>
                     </card>
                 </div>
-            </div>
-        </Scroller>
-    </div>
+
+        </scroller>
+    <!--</div>-->
 </template>
 
 <script>
-    import { Card, Scroller } from 'vux'
+    import { Card } from 'vux'
+
     export default {
         name: "index",
         data () {
@@ -78,19 +82,42 @@
 
         },
         components: {
-            Card,
-            Scroller
+            Card
         },
         methods: {
             toDetail () {
                 this.$router.push({name: 'detail'})
+            },
+            refresh: function (done) {
+                // var self = this
+                // setTimeout(function () {
+                //     var start = self.top - 1
+                //     for (var i = start; i > start - 10; i--) {
+                //         self.items.splice(0, 0, i + ' - keep walking, be 2 with you.');
+                //     }
+                //     self.top = self.top - 10;
+                //     done();
+                // }, 1500)
+            },
+
+            infinite: function (done) {
+                // var self = this
+                // setTimeout(function () {
+                //     var start = self.bottom + 1;
+                //     for (var i = start; i < start + 10; i++) {
+                //         self.items.push(i + ' - keep walking, be 2 with you.');
+                //     }
+                //     self.bottom = self.bottom + 10;
+                //     done();
+                // }, 1500)
             }
         },
         mounted () {
-            // setTimeout(() => {
-            //     this.height = document.body.clientHeight - 100 + 'px';
-            //     console.log(this.height)
-            // }, 1)
+            setTimeout(() => {
+                this.height = document.body.clientHeight + 'px';
+                console.log(this.height)
+            }, 1)
+            console.log(this.$mount());
         }
     }
 </script>

@@ -5,7 +5,7 @@
             <p class="center">王晓笨蛋</p>
         </blur>
         <!--<flexbox :gutter="0">-->
-            <!--<flexbox-item v-for="(img, index) in images" :key="index"><img :src="img" style="width:100%" @click="url = img"/></flexbox-item>-->
+        <!--<flexbox-item v-for="(img, index) in images" :key="index"><img :src="img" style="width:100%" @click="url = img"/></flexbox-item>-->
         <!--</flexbox>-->
         <group>
             <cell title="个人资料" is-link @click.native="go"></cell>
@@ -20,32 +20,33 @@
 </template>
 
 <script>
-    import { Flexbox, FlexboxItem, Blur, Cell, Group } from 'vux'
-    export default {
-        name: "self",
-        components: {
-            Blur,
-            Flexbox,
-            FlexboxItem,
-            Cell,
-            Group
-        },
-        data () {
-            return {
-                images: [
-                    'https://o3e85j0cv.qnssl.com/tulips-1083572__340.jpg',
-                    'https://o3e85j0cv.qnssl.com/waterway-107810__340.jpg',
-                    'https://o3e85j0cv.qnssl.com/hot-chocolate-1068703__340.jpg'
-                ],
-                url: 'https://o3e85j0cv.qnssl.com/tulips-1083572__340.jpg'
-            }
-        },
-        methods: {
-            go () {
-                console.log(1)
-            }
-        }
+  import {Flexbox, FlexboxItem, Blur, Cell, Group} from 'vux'
+
+  export default {
+    name: "self",
+    components: {
+      Blur,
+      Flexbox,
+      FlexboxItem,
+      Cell,
+      Group
+    },
+    data() {
+      return {
+        images: [
+          'https://o3e85j0cv.qnssl.com/tulips-1083572__340.jpg',
+          'https://o3e85j0cv.qnssl.com/waterway-107810__340.jpg',
+          'https://o3e85j0cv.qnssl.com/hot-chocolate-1068703__340.jpg'
+        ],
+        url: 'https://o3e85j0cv.qnssl.com/tulips-1083572__340.jpg'
+      }
+    },
+    methods: {
+      go: function () {
+
+      }
     }
+  }
 </script>
 
 <style scoped>
@@ -55,6 +56,7 @@
         color: #fff;
         font-size: 18px;
     }
+
     .center img {
         width: 100px;
         height: 100px;
